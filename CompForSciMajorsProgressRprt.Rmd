@@ -1,0 +1,30 @@
+---
+title: "Comp4SciMajorsProject2021"
+output: html_document
+---
+#This is a document detailing the progress being made on the computing project for Matthew Anderson and Casey Cox. Our project involves writing a program that can detect the timing intervals of an adjusatble timing circuit.This project will utilize the GPIO pins of a Raspberry Pi and will be written using Python. 
+
+#The first github repository used will be gpiozero, found at https://github.com/gpiozero/gpiozero 
+
+#The timing circuit used is a digital LED relay board timing circuit found at https://www.amazon.com/Digital-Timing-Circuit-Switch-Trigger/dp/B074TBRRTY/ref=sr_1_3?dchild=1&keywords=timing+circuit&qid=1617815030&sr=8-3
+#My initial plan will be to use the included button function. When the button is pressed, it will set the voltage to high. The program will then start a timer. The timer will stop when the voltage is set to low. The result will then be printed.
+
+#Example code
+```{python}
+from gpiozero import Button
+from signal import pause
+from time import time
+
+def time_start():
+    time()
+def time_end():
+    time()
+button = Button(2)
+
+button.when_pressed = time_start
+button.when_released = time_end
+
+print['time_start'-'time_end']
+
+pause()
+```
