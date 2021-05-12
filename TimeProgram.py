@@ -1,6 +1,9 @@
 from gpiozero import Button #reads inputs from gpio; used to read when circuit is closed
 from signal import pause
 from time import time #gets current Unix time
+#gpiozero refers to the general purpose input pins in the Pi. They are being used here to power the timing circuit and detect an imput from it.
+#"Button" is a program that allows for the detection of a closing circuit. "puase" will be used to halt the program when neccessarry, and "time" will use the
+#internal clock of the Pi to find time ellapsed during a given period.
 
 time_start = time() #defines time_start and time_end as time functions
 time_end = time()
